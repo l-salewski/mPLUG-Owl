@@ -25,7 +25,7 @@ from transformers.modeling_outputs import CausalLMOutputWithPast
 from .configuration_mplug_owl2 import MPLUGOwl2Config, MplugOwlVisionConfig, MplugOwlVisualAbstractorConfig
 from .visual_encoder import MplugOwlVisionModel, MplugOwlVisualAbstractorModel
 from .modeling_llama2 import replace_llama_modality_adaptive
-from mplug_owl2.constants import IMAGE_TOKEN_INDEX, IGNORE_INDEX
+from src.mPLUG_Owl.mPLUG_Owl2.mplug_owl2.constants import IMAGE_TOKEN_INDEX, IGNORE_INDEX
 from icecream import ic
 
 class MPLUGOwl2MetaModel:

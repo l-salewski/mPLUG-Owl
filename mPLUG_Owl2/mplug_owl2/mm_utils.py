@@ -4,7 +4,7 @@ import base64
 
 import torch
 from transformers import StoppingCriteria
-from mplug_owl2.constants import IMAGE_TOKEN_INDEX,DEFAULT_IMAGE_TOKEN
+from src.mPLUG_Owl.mPLUG_Owl2.mplug_owl2.constants import IMAGE_TOKEN_INDEX,DEFAULT_IMAGE_TOKEN
 from icecream import ic
 
 

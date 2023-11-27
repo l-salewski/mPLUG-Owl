@@ -1,7 +1,7 @@
 import dataclasses
 from enum import auto, Enum
 from typing import List, Tuple
-from mplug_owl2.constants import DEFAULT_IMAGE_TOKEN
+from src.mPLUG_Owl.mPLUG_Owl2.mplug_owl2.constants import DEFAULT_IMAGE_TOKEN
 
 class SeparatorStyle(Enum):
     """Different separator style."""

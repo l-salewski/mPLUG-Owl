@@ -20,8 +20,9 @@ import shutil
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoConfig, BitsAndBytesConfig
 from transformers.models.clip.image_processing_clip import CLIPImageProcessor
 import torch
-from mplug_owl2.model import *
+from src.mPLUG_Owl.mPLUG_Owl2.mplug_owl2.model.modeling_mplug_owl2 import MPLUGOwl2LlamaForCausalLM
 from icecream import ic
+
 def load_pretrained_model(model_path, model_base, model_name, load_8bit=False, load_4bit=False, device_map="auto", device="cuda", **kwargs):
     kwargs = {"device_map": device_map, **kwargs}
 
