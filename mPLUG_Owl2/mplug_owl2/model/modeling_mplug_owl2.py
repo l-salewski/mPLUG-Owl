@@ -19,12 +19,12 @@ import torch
 import torch.nn as nn
 from torch.nn import CrossEntropyLoss
 
-from transformers import AutoConfig, AutoModelForCausalLM, LlamaConfig, LlamaModel, LlamaForCausalLM
+from transformers import AutoConfig, AutoModelForCausalLM
 from transformers.modeling_outputs import CausalLMOutputWithPast
 
-from .configuration_mplug_owl2 import MPLUGOwl2Config, MplugOwlVisionConfig, MplugOwlVisualAbstractorConfig
+from .configuration_mplug_owl2 import LlamaConfig, MPLUGOwl2Config, MplugOwlVisionConfig, MplugOwlVisualAbstractorConfig
 from .visual_encoder import MplugOwlVisionModel, MplugOwlVisualAbstractorModel
-from .modeling_llama2 import replace_llama_modality_adaptive
+from .modeling_llama2 import LlamaModel, LlamaForCausalLM
 from src.mPLUG_Owl.mPLUG_Owl2.mplug_owl2.constants import IMAGE_TOKEN_INDEX, IGNORE_INDEX
 from icecream import ic
 
@@ -303,8 +303,6 @@ class MPLUGOwl2LlamaForCausalLM(LlamaForCausalLM, MPLUGOwl2MetaForCausalLM):
 
 AutoConfig.register("mplug_owl2", MPLUGOwl2Config)
 AutoModelForCausalLM.register(MPLUGOwl2Config, MPLUGOwl2LlamaForCausalLM)
-
-replace_llama_modality_adaptive()
 
 if __name__ == "__main__":
     config = MPLUGOwl2Config.from_pretrained('/cpfs01/shared/public/test/vicuna-7b-v1.5/')
